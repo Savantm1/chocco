@@ -459,17 +459,19 @@
                             <span class="form__title">Комментарии</span>
                             <input type="textarea" class="form__input" name="person_comment" required>
                         </label>
-                        <label class="form__block">
-                            <input type="radio" class="form__input" name="person_money" required>
-                            <span class="form__title">потребуется сдача</span>
-                        </label>
-                        <label class="form__block">
-                            <input type="radio" class="form__input" name="person_money" required>
-                            <span class="form__title">оплата по карте</span>
-                        </label>
-                        <label class="form__block">
-                            <input type="checkbox" class="form__input" name="person_money" required>
-                            <span class="form__title">Не перезванивать</span>
+                        <div class="form__row">
+                            <label class="form__block">
+                                <input type="radio" class="form__radio" name="person_money" required>
+                                <span class="form__title">Потребуется сдача</span>
+                            </label>
+                            <label class="form__block">
+                                <input type="radio" class="form__radio" name="person_money" required>
+                                <span class="form__title">Оплата по карте</span>
+                            </label>
+                        </div>
+                        <label class="form__block_checkbox">
+                            <input type="checkbox" class="form__checkbox" name="person_money" required>
+                            <span class="form__title_checkbox">Не перезванивать</span>
                         </label>
                         <div class="btn_row">
                             <a href="" class="btn">Заказать</a>
@@ -479,7 +481,42 @@
                 </form>
             </div>
         </section>
-        <section class="section contacts_section"></section>
+        <section class="section contacts_section">
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae751bd0272a728e69cb3b37ac9939eee83cf83c5683af929bc09482c61461520&amp;source=constructor" width="100%" height="650" frameborder="0"></iframe>
+            </div>
+            <div class="contact_row">
+                <div class="container">
+                    <div class="left_side">
+                        <span class="adress">Москва, ул. Новый Арбат, д.31/12</span>
+                        <a href="#" class="telephone">8 800 903 90 90</a>
+                    </div>
+                    <div class="right_side">
+                        <ul class="social_list">
+                            <li class="social_list__item">
+                                <a href="#" class="social__link">
+                                    <svg class="socicon vk"></svg>
+                                </a>
+                            </li>
+                            <li class="social_list__item">
+                                <a href="#" class="social__link">
+                                    <svg class="socicon fb"></svg>
+                                </a>
+                            </li>
+                            <li class="social_list__item">
+                                <a href="#" class="social__link">
+                                    <svg class="socicon inst"></svg>
+                                </a>
+                            </li>
+                            <li class="social_list__item">
+                                <a href="#" class="social__link">
+                                    <svg class="socicon tw"></svg>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
     </div>
 
 
