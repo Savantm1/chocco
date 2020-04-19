@@ -44,9 +44,10 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <img class="phone" src="./img/icons/phone.svg">
-                            </img>
-                            <a href="#" class="telephone">8 800 903 90 90</a>
+                            <svg class="phone-icon">
+                                <use xlink:href="./img/icons/sprite.svg#phone"></use>
+                            </svg>
+                            <a href="tel:88009039090" class="telephone">8 800 903 90 90</a>
                         </li>
                     </ul>
                 </header>
@@ -62,7 +63,7 @@
                             <li class="content__features_item"> Не портит фигуру</li>
                         </ul>
                     </div>
-                    <div class="content__right-side">
+                    <div class="content__right-side decoration">
                         <img src="./img/bars.png" alt="" class="bars_image">
                         <img src="./img/berry_1.png" alt="" class="berry_image">
                         <img src="./img/leaf_1.png" alt="" class="leaf_first">
@@ -72,7 +73,6 @@
                     </div>
                 </div>
             </div>
-            <div class="decoration main_section_decoration"></div>
         </section>
         <section class="section features_section">
             <div class="container">
@@ -91,7 +91,7 @@
                         <img src="./img/dots.png" alt="dots_icon" class="support_item_image">
                     </li>
                     <li class="features_list__item">
-                        <img src="/img/smile_icon.png" alt="smile_icon" class="features_item_image">
+                        <img src="./img/smile_icon.png" alt="smile_icon" class="features_item_image">
                         <p class="features_item__header">Вкусно</p>
                         <p class="features_item__description">Нежный, ненавязчивый, изысканный –
                             так клиенты описывают вкусовые
@@ -191,7 +191,7 @@
                             </div>
                             <div class="right_slide_side">
                                 <div class="structure_btn"></div>
-                                <ul class="sctructure_list">
+                                <ul class="sctructure_list visually-hidden">
                                     <li class="sctructure_list__item">
                                         <img src="./img/icons/grape.svg" alt="" class="icon">
                                         <span class="ingridient">Виноград</span>
@@ -241,7 +241,6 @@
                                     </div>
                                     <a href="" class="btn">заказать</a>
                                 </div>
-
                             </div>
                         </li>
                     </ul>
@@ -249,6 +248,7 @@
                 <div class="arrow_right"></div>
 
             </div>
+            <img class=" decoration" src="./img/Berry_slider.png" alt="">
         </section>
         <section class="section team_section">
             <div class="container">
@@ -295,7 +295,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="decoration team_decoration"></div>
+            <div class="decoration team_decoration">
+                <img src="./img/berry_team.png" alt="">
+            </div>
         </section>
         <section class="section menu_section">
             <h2 class="menu_header">Меню</h2>
@@ -355,6 +357,7 @@
                     </div>
                 </li>
             </ul>
+            
         </section>
         <section class="section feedback_section">
             <div class="container">
@@ -405,12 +408,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="decoration menu_decoration"></div>
+                <img src="./img/berry_feed_1.png" alt="" class="berry_1 decoration">
+                <img src="./img/berry_feed_2.png" alt="" class="berry_2 decoration">
         </section>
         <section class="section video_section">
             <div class="container">
                 <h2 class="section_header">как мы работаем</h2>
-                <div id="video"><iframe width="660" height="405" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div id="video"><iframe width="660" height="405" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
             </div>
             <img src="./img/video_berry.png" alt="" class="decoration">
         </section>
@@ -457,11 +463,11 @@
                     <div class="form__column">
                         <label class="form__block">
                             <span class="form__title">Комментарии</span>
-                            <input type="textarea" class="form__input" name="person_comment" required>
+                            <input type="textarea" class="form__input"  name="person_comment" required>
                         </label>
                         <div class="form__row">
                             <label class="form__block">
-                                <input type="radio" class="form__radio" name="person_money" required>
+                                <input type="radio"  checked class="form__radio" name="person_money" required>
                                 <span class="form__title">Потребуется сдача</span>
                             </label>
                             <label class="form__block">
@@ -480,46 +486,62 @@
                     </div>
                 </form>
             </div>
+            <img src="./img/berry_form.png" alt="" class="decoration">
         </section>
         <section class="section contacts_section">
             <div class="map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae751bd0272a728e69cb3b37ac9939eee83cf83c5683af929bc09482c61461520&amp;source=constructor" width="100%" height="650" frameborder="0"></iframe>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae751bd0272a728e69cb3b37ac9939eee83cf83c5683af929bc09482c61461520&amp;source=constructor"
+                    width="100%" height="650" frameborder="0"></iframe>
             </div>
             <div class="contact_row">
                 <div class="container">
                     <div class="left_side">
                         <span class="adress">Москва, ул. Новый Арбат, д.31/12</span>
-                        <a href="#" class="telephone">8 800 903 90 90</a>
+                        <div class="phone_block">
+                            <svg class="phone-icon">
+                                <use xlink:href="./img/icons/sprite.svg#phone"></use>
+                            </svg>
+                            <a href="tel:88009039090" class="telephone">8 800 903 90 90</a>
+                        </div>
                     </div>
                     <div class="right_side">
                         <ul class="social_list">
                             <li class="social_list__item">
                                 <a href="#" class="social__link">
-                                    <svg class="socicon vk"></svg>
+                                    <svg class="socicon vk">
+                                        <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="social_list__item">
                                 <a href="#" class="social__link">
-                                    <svg class="socicon fb"></svg>
+                                    <svg class="socicon fb">
+                                        <use xlink:href="./img/icons/sprite.svg#fb"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="social_list__item">
                                 <a href="#" class="social__link">
-                                    <svg class="socicon inst"></svg>
+                                    <svg class="socicon inst">
+                                        <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="social_list__item">
                                 <a href="#" class="social__link">
-                                    <svg class="socicon tw"></svg>
+                                    <svg class="socicon tw">
+                                        <use xlink:href="./img/icons/sprite.svg#tv"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
+                    </div>
                 </div>
-            </div>
         </section>
     </div>
 
-
+    <script src="icon_customImage.js" type="text/javascript"></script>
     <script src="../js/main.js"></script>
     <script src="../js/vendor.js"></script>
 </body>
