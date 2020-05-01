@@ -1,0 +1,169 @@
+.menu_section {
+
+ background-image: url('./img/menu_bg.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+
+ position: relative;
+
+ display: flex;
+
+ .menu_header {
+
+  font-family: "AlegreyaSans";
+  font-weight: 800;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: white;
+
+  margin-left: 40px;
+
+
+ }
+
+ .menu_list {
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+
+  margin: 0px;
+  padding: 0px;
+
+  list-style: none;
+
+  .milk_bar {
+
+   background-image: url('./img/kokos.png');
+
+  }
+
+  .fruit_bar {
+
+   background-image: url('./img/Granola.png');
+
+  }
+
+  .wild_bar {
+
+   background-image: url('./img/shutter.png');
+
+  }
+
+  .menu_list__item {
+
+   background-image: cover;
+   background-repeat: no-repeat;
+
+   overflow: hidden;
+
+   position: relative;
+
+   display: flex;
+
+   font-family: 'AlegreyaSans';
+
+   height: 100%;
+
+   
+   .title_block {
+    position: relative;   
+
+    width: 6.15385rem;
+
+    &::before {
+
+     content:'';
+
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+    }
+
+    .item__title {
+
+     position: absolute;
+     bottom: 4%;
+     left: 50%;
+
+     font-weight: 700;
+     font-size: 34px;
+     color: #fff;
+     text-transform: uppercase;
+
+     transform: translateY(100%) rotate(-90deg);
+     transform-origin: 0 0;
+     white-space: nowrap;
+
+
+     margin: 0;
+     padding: 0;
+     margin-left: -20px;
+
+    }
+
+   }
+
+   .title_block-invisible {
+    width: 6.15385rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -10;
+}
+
+   
+
+   .item_description_block {
+    
+    width: 0px;
+    right: 60px;
+
+    background-color: rgba(47, 50, 52, 0.93) ;
+    max-width: 41.53846rem;
+    overflow: hidden;
+    transition: ease 1.4s;
+
+    &-active {
+    width: 420px;
+    max-width: 100%;
+    }
+
+    .description { 
+     width:400px;
+     height: 100%;
+
+     padding: 45px;
+     margin: 0px;
+
+     font-size: 18px;
+     color: #fff;
+    }
+
+    .cross_btn {
+    
+     display: none;
+     position: absolute;
+     right: 20px;
+     top: 20px;
+
+     width: 20px;
+     height: 20px;
+
+
+    }
+
+   }
+
+  }
+
+ }
+}

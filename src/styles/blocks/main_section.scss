@@ -1,0 +1,308 @@
+
+.main_section{
+ 
+background-image: url("img/main_bg.png");
+background-repeat: no-repeat;
+background-size: cover;
+
+
+.content {
+ display: flex;
+ margin-left: 50px;
+ margin-right: 45px;
+ height: 100%;
+
+ @include tablets() {
+    
+  flex-direction: column-reverse;
+  align-items: center;
+  }
+
+  @include phones() {
+
+    margin-top: -70px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+ .content__left-side {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+
+   
+  margin-top: 42px;
+  color: #fff;
+  width:50%;
+  font-family: 'AlegreyaSans';
+  font-weight: bold;
+
+  @include tablets() {
+    
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    }
+  
+  @include phones() {
+
+    margin-top: 20px; 
+
+  }
+  
+  .content__header {
+   text-transform: uppercase;
+   font-size: 60px;
+   line-height: 1;
+   margin:0;
+   padding:0;
+
+   @include tablets() {
+    
+    text-align: center;
+    }
+
+    @include phones() {
+
+      font-size: 50px;
+    }
+  }
+
+  .content__desctiption {
+   font-weight: normal;
+   font-size: 21px;
+   padding-left: 2px;
+   margin-top:6px;
+   margin-bottom: 29px;
+   line-height: 1.3;
+   width: 360px;
+  }
+
+.btn {
+
+ color:#0f5a47;
+ text-decoration: none;
+
+ width:auto;
+ padding: 16px 35px;
+ margin-left: 5px;
+
+ background-color:#fff;
+ border-radius: 60px;
+ box-shadow: 0 4px 10px #333333;
+
+ font-size: 19px;
+ text-transform: uppercase;
+ font-weight: 800;
+
+ transition: 0.4s ease ;
+
+ &:hover {
+
+  background-color: #0f5a47;
+  color: #fff;
+ }
+}
+
+.content__features_list {
+  font-weight: normal;
+  list-style: none;
+
+  display: flex;
+
+  margin-top: 65px;
+  padding-left: 0;
+
+  .content__features_item {
+    padding-left: 55px;
+    display: inline-block;
+    position: relative;
+    margin-right:20px;
+
+    @include phones(){
+
+      padding-left: 65px; 
+
+      font-size: 18px; 
+    }
+
+  }
+    .content__features_item:first-child::before {
+      content:'';
+      display: block;
+      position: absolute;
+
+      width:50px;
+      height: 42px;
+      left:0px;
+      background-image: url("./img/leaf_icon.png");
+      background-repeat:no-repeat;
+      background-position: center;
+
+      @include phones() {
+
+        width:60px;
+        height: 52px; 
+      }
+    }
+
+    .content__features_item:nth-child(2)::before {
+      content:'';
+      display: block;
+      position: absolute;
+
+      width:50px;
+      height: 40px;
+      left:0px;
+      background-image: url("./img/car_icon.png");
+      background-repeat:no-repeat;
+      background-position: center;
+
+      @include phones() {
+
+        width:60px;
+        height: 50px; 
+      }
+    }
+
+    .content__features_item:nth-child(3) {
+
+      @include phones() {
+
+        margin-right: 0px;
+
+      }
+    }
+  
+    .content__features_item:nth-child(3)::before {
+      content:'';
+      display: block;
+      position: absolute;
+
+      width:42px;
+      height: 42px;
+      left:0px;
+
+      background-image: url("./img/waist_icon.png");
+      background-repeat:no-repeat;
+      background-position: center; 
+
+      @include phones() {
+
+        width:50px;
+        height: 52px; 
+      }
+    }
+
+}
+
+ }
+
+.content__right-side {
+  
+    width: 50%;
+    position: relative;
+
+    @include tablets () {
+
+      height: 414px;
+      width: 70%;
+
+      margin-top: 50px;
+
+    }
+
+    @include phones() {
+
+      height: 400px; 
+      width: 80%;
+      margin-top: 120px;  
+    }
+}
+  
+  .bars_image {
+    position: absolute;
+    left:12px;
+    
+    @include tablets(){
+      top:-40px;
+    }
+
+  }
+
+  .berry_image {
+    position: absolute;
+    left:55px;
+    bottom: 10px;
+
+    width:45%;
+    height: 40%;
+
+    @include tablets() {
+
+      bottom: 70px;
+    }
+  }
+
+  .leaf_first {
+    position: absolute;
+    right:-30px;
+    bottom: 70px;
+    
+    width:50%;
+    height: 35%;
+
+    @include tablets() {
+
+      bottom: 100px;
+    }
+  }
+
+  .leaf_second {
+    position: absolute;
+    right:240px;
+    bottom: -55px;
+    
+    width:30%;
+    height: 20%;
+
+        @include tablets() {
+
+      bottom: 0px;
+    }
+  }
+
+  .berry_second {
+    position: absolute;
+    right:50px;
+    bottom: -78px;
+    
+    width:21%;
+    height: 21%;
+
+    @include tablets() {
+
+      bottom: 0px;
+    }
+  }
+
+  .leaf_third {
+    position: absolute;
+    left:-109%;
+    bottom: -78px;
+    
+    width:12%;
+    height: 21%;
+  }
+
+}
+ 
+}
+
+
+
+.phone-icon {
+  fill:#fff;
+  width: 30px;
+  height: 14px;
+}

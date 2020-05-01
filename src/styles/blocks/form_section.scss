@@ -1,0 +1,320 @@
+.form_section {
+  position: relative;
+
+ background-image: url('./img/berry_pattern.png');
+ background-position: center;
+
+ font-family: 'AlegreyaSans';
+
+ .container{
+
+  display: flex;
+  align-items: center;
+
+  color: #0f5a47;
+
+  .form_section__header {
+
+   font-size: 48px;
+   text-transform: uppercase;
+
+   margin-top: 66px;
+   margin-bottom: 30px;
+
+   text-align: center;
+
+  }
+  
+  .form {
+
+   font-family: 'AlegreyaSans';
+   font-size: 18px;
+   font-weight: 600;
+
+
+   display: flex;
+   max-width: 940px;
+
+   @include tablets() {
+
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+   .form__column {
+
+    display: flex;
+    flex-direction: column;
+    width:50%;
+
+    align-items: center;
+    padding: 10px;
+    padding-right: 0px;
+
+    @include tablets() {
+
+      width: 80%;
+    }
+
+    .form__row {
+     display: flex;
+     justify-content: space-around;
+     width:100%;
+
+     margin-bottom: 15px;
+
+     .form__block {
+      
+      flex-direction: column;
+      margin-right: 10px;
+
+      width: 100%;
+
+
+      &:last-child() {
+
+       margin-right: 0px;
+      }
+
+      .form__title {
+       display: block;
+       
+      }
+
+      .form__input {
+        box-sizing: border-box;
+        padding: 4px 15px;
+        font-size: 28px;
+
+       height: 60px;
+       border: none;
+       width: 100%;
+      }
+
+     }
+   }
+
+    &:nth-child(2) {
+     
+      padding-right: 10px;
+
+     .form__block:first-child {
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+
+      .form__input {
+        overflow: auto;
+       height: 180px;
+       border: none;
+
+       box-sizing: border-box;
+       padding: 4px 15px;
+       font-size: 28px;
+       vertical-align: top;
+        text-align: start;
+
+      }
+
+     }
+      .form__title {
+
+       display: block;
+
+      }
+
+      .form__row {
+       margin: 15px;
+       margin-bottom: 0px;
+
+       @include tablets() {
+
+        margin-top: 30px; 
+       }
+
+       .form__block {
+
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+        padding-left: 22px;
+
+        @include tablets(){
+
+          width: 30%;  
+        } 
+
+        &>.form__title::before {
+          position: absolute;
+          content: '';
+
+          width: 18px;
+          height: 18px;
+          left: 0px;
+          background-color: #fff;
+          border-radius: 50%;
+          border: 1px solid #0f5a47;
+        }
+        
+        &>input:checked+.form__title::after {
+          position: absolute;
+          content: '';
+
+          width: 8px;
+          height: 8px;
+          left: 6px;
+          top: 6px;
+          background-color: #0f5a47;
+          border-radius: 50%;
+        }
+        
+
+
+
+
+       }
+
+      }
+
+      .form__block:last-child(){
+
+       width: 100%;
+
+      }
+
+      .form__block_checkbox{
+       
+       width: 100%;
+
+       @include tablets() {
+
+        margin-top: 30px;
+        text-align: center;
+
+       }
+
+      &>input:checked+.form__title_checkbox::after {
+
+        content:'';
+        position: absolute;
+        background-image: url('./img/check.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        left:1px;
+      }
+
+      .form__title_checkbox {
+
+          position: relative;
+
+          padding-left: 22px;
+          display: inline;
+          // width: 100%;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left:0px;
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border-radius: 2px;
+            border: 1px solid #0f5a47;
+          }
+          
+
+      }
+
+      .form__checkbox {
+
+        display: none;
+      }
+
+      }
+
+     }
+
+
+    }
+     
+
+   }
+  }
+  .decoration {
+    width: 47px;
+    height: 48px;
+
+    left: 20px;
+    bottom: 20px;
+  }
+ }
+
+ .btn_row {
+
+  width:100%;
+  height: 100px;
+  margin-top: 40px;
+
+  @include tablets() {
+
+    text-align: center;
+
+  }
+
+  @include minPhone() {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .btn {
+
+   color:#fff;
+   text-decoration: none;
+  
+   width:auto;
+   padding: 16px 35px;
+   margin-left: 5px;
+  
+   background-color:#0f5a47;
+   border:none;
+   border-radius: 60px;
+  
+   font-size: 19px;
+   text-transform: uppercase;
+   font-weight: 800;
+
+   @include minPhone() {
+
+    display: block;
+   }
+  }
+
+  .btn:last-child {
+   background: none;
+   color:#0f5a47;
+
+ 
+  }
+
+ }
+
+.error {
+  color: red;
+}
+
+
+
+//  Псевдоэлементы для чекбокса и радио 
+
+ .form__radio {
+   display: none;
+ }
+

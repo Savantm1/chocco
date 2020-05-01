@@ -1,0 +1,446 @@
+.slider_section {
+
+   position: relative;
+   display: flex;
+
+   background-image: url('./img/slider_bg.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   .container {
+      
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      padding: 0px 10px;
+
+      @include tablets() {
+
+         width: 80%;
+      }
+
+      @include phones() {
+
+         width: 97%;
+
+      }
+
+
+      .arrow_left {
+
+         background-image: url("./img/arrow_l.png");
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+
+         width:45px;
+         height: 45px;
+         left: 0px;
+
+         @include tablets() {
+
+            position: absolute;
+            top: 200px; 
+         }
+
+         @include phones() {
+            top: 280px; 
+         }
+      }
+
+      .wrapper {
+         
+         height: 650px;
+         
+         @include tablets() {
+
+            height: 1000px; 
+         }
+         
+         @include phones() {
+            padding-top: 50px; 
+         }
+
+         .slide_list{
+
+
+            right: 0;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+
+            list-style: none;
+
+            margin: 0;
+            padding: 0;
+
+            height: 100%;
+            width: 200%;
+            
+            transition: ease 0.4s;
+
+            .slide {
+
+               width: 100%;
+
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+
+               @include tablets() {
+
+                  flex-direction: column;
+               }
+
+               .left_slide_side {
+                  position: relative;
+               
+                  width: 50%;
+
+                  @include tablets() {
+
+                  display: flex;
+                  justify-content: space-around;
+
+                  width: 100%; 
+                  }
+
+                  .slide_leaf_one {
+
+                     position: absolute;
+
+                     right: 0px;
+                     top:350px;
+
+                     width: 100px;
+                     height: 70px;
+                  }
+
+                  .slide_leaf_two {
+
+                     position: absolute;
+
+                     left: 0px;
+                     top:90px;
+
+                     width: 70px;
+                     height: 100px;
+                  }
+
+                  .bars_image {
+
+                     position: relative;
+
+                     left: 50px;
+                     
+                     width: 400px;
+
+                     @include tablets () {
+
+                        left: 0; 
+                     }
+                  }
+               }         
+
+               .right_slide_side {
+                  position: relative;
+                  padding-left: 64px;
+               
+                  width: 50%;
+                  height: 100%;
+
+                  @include tablets() {
+
+                     width: 100%; 
+                     padding-left: 0px;
+
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                 }
+
+                     }
+
+                  .structure_btn {
+                     
+                     width: 95px;
+                     height: 95px;
+                     background-image: url('./img/structure.png');
+                     background-repeat: no-repeat;
+
+                     margin-left: 6px;
+                     margin-top: 66px;
+
+                     @include tablets() {
+
+                        position: absolute; 
+                        right: 0;
+                        top: -442px; 
+                     }
+
+                     @include phones() {
+                        width:105px;  
+                        height: 105px;
+                        border-radius: 5px; 
+
+                        top:-500px; 
+                     }
+
+                  }
+
+                  .structure_list {
+
+                     position: absolute;
+                     border-radius: 10px;
+                     right: 68px;
+                     top: 65px;
+
+                     background-color: #eee;
+                     opacity: 0.9;
+
+                     list-style: none;
+                     margin: 0px;
+                     padding: 0px;
+
+                     // transition: ease 4.4s;
+
+                     @include tablets() {
+
+                        display: block;
+                        top: -378px;
+                        right: 95px; 
+                     }
+
+                     @include phones () {
+
+                        right:86px; 
+                        
+                        padding: 18px;   
+                     }
+
+                     .structure_list__item {
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        font-family: "AlegreyaSans";
+                        font-weight: 600;
+                        font-size: 18px;
+
+                        padding: 7px 10px;
+
+                        width: 270px;
+
+                        .icon {
+
+                           width:35px;
+
+                        }
+
+                     }
+
+                  }
+
+                  .slide_header {
+
+                     font-family: 'AlegreyaSans';
+                     font-weight: bold;
+                     font-size: 36px;
+                     text-transform: uppercase;
+                     line-height: 1.2;
+
+                     margin: 0px;
+                     margin-top: 26px;
+
+                     @include phones(){
+
+                        margin-top: 60px; 
+                        font-size: 40px;
+                        text-align: center;  
+                     }
+
+                  }
+
+                  .slide_description {
+                     font-family: 'AlegreyaSans';
+                     font-size: 18px;
+                     line-height: 1.2;
+                     margin-top: 10px;
+                     margin-right: 80px;
+                     color: #666;
+
+                     @include tablets() {
+
+                        margin-right: 0; 
+                        text-align: center; 
+                     }
+
+                     @include phones() {
+
+                        font-size: 22px;
+                        font-weight: bold;
+
+                     }
+
+                  }
+
+                  .slide_info_block {
+                     font-family: 'AlegreyaSans';
+                     font-size: 18px;
+
+                     display: flex;
+                     flex-wrap: wrap;
+                     align-items: center;
+
+                     @include tablets() {
+
+                        justify-content: space-around;
+                     }
+
+
+                      
+
+                     .kkal_block {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        width: 40%;
+
+                        @include tablets() {
+
+                           align-items: center;
+                        }
+
+                        @include phones() {
+
+                           font-size: 25px;  
+                        }
+
+                        .kkal_info {
+
+                           font-weight: bold;
+                           margin-bottom: 20px;
+
+                        }
+
+                     }
+
+                     .weight_block {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        width: 40%;
+
+                        @include tablets() {
+
+                           align-items: center; 
+                        }
+
+                        @include phones() {
+
+                           font-size: 25px;  
+                        } 
+
+                        .weight_info {
+
+                           font-weight: bold;
+                           margin-bottom: 20px;
+                        }
+                     }
+
+                     .price_block {
+
+                        width:40%;
+
+                        .price {
+
+                           font-size: 60px;
+                           font-weight: 400;
+
+                           margin: 0px;
+                        }
+                      
+
+                     }
+
+                     .btn {
+
+                        color:#fff;
+                        text-decoration: none;
+                        margin: 0;
+                       
+                        width:auto;
+                        padding: 16px 35px;
+                        margin-left: 5px;
+                       
+                        background-color:#0f5a47;
+                        border-radius: 30px;
+                       
+                        font-size: 19px;
+                        text-transform: uppercase;
+                        font-weight: 800;
+
+                        transition: ease 0.4s;
+
+                        &:hover {
+
+                           background-color:#0f7a47;
+                        }
+                        
+                     }
+
+                  }
+                  
+               }
+            
+            }
+         }
+
+      }
+
+      .arrow_right {
+
+         background-image: url("./img/arrow_r.png");
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+
+         width: 45px;
+         height: 45px;
+
+         @include tablets() {
+
+            position: absolute;
+            top: 200px; 
+            right: 0;
+         } 
+
+         @include phones() {
+            top: 280px; 
+         }
+
+      }
+
+      .decoration {
+   
+         position: absolute;
+         right: 20px;
+         bottom: -80px;
+   
+         width: 150px;
+         height: 130px;
+
+         @include phones() {
+            display: none;
+         }
+      }
+
+   }  
+
+
+   .arrows {
+      z-index: 10;
+   }
+

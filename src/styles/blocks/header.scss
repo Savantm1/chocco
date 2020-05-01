@@ -1,0 +1,155 @@
+
+
+.header {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+
+  @include tablets () {
+    
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 97%;
+  }
+
+  @include phones () {
+    margin: 20px; 
+  }
+
+  .nav {
+    width:100%;
+    font-family: 'AlegreyaSans';
+    font-size: 18px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav__item:nth-child(3){
+      
+      min-width: 180px;
+    }
+
+    .logo {
+      height: 40px;
+      width: 50px;
+      margin-right: 10px;
+
+
+      @include tablets() {
+
+        padding-left: 10px ;
+
+        }
+      
+      @include phones(){
+
+        height: 50px; 
+      }  
+
+
+    }
+
+    .phone-icon {
+
+      @include tablets () {
+        display: none;
+      }
+      
+    }
+
+    .telephone {
+
+      font-size: 24px;
+      text-decoration: none;
+      color: #fff;
+
+      transition: 0.4s ease;
+
+      @include tablets () {
+        display: none;
+      }
+      
+
+ &:hover {
+
+  color:#0f5a47;
+ }
+    }
+
+    .main_nav {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+
+
+      @include tablets() {
+
+      display: none;
+      }
+
+      .main_nav__item {
+        margin-right: 25px;
+      }
+
+
+      .main_nav_link {
+        text-decoration: none;
+        color: #fff;
+
+        transition: 0.3s ease ;
+
+        &:hover {
+       
+         color:#0f5a47;
+         text-decoration: underline;
+        }
+
+      }
+    }
+  }
+
+  .hamburger_link {
+
+
+    display:none;
+
+    @include tablets () {
+
+      margin-right: 10px;
+      margin-top: 20px;
+
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      .hamburger_part {
+        width:100%;
+        height: 6px;
+        margin-bottom: 5px;
+        
+        border-radius: 4px;
+        background-color: #fff;
+
+      }
+
+    }
+
+    
+
+
+
+  }
+    
+ 
+}
+
